@@ -1,9 +1,13 @@
 name: Node 14 CI
 
-on: [push]
+on:
+  push:
+    branches:
+      - "**"
+      - "!master"
 
 jobs:
-  build:
+  ci-master:
     runs-on: ubuntu-latest
 
     steps:
